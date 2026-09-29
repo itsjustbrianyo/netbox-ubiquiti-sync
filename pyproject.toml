@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netbox-unifi-sync"
+version = "0.2.4"
+description = "NetBox plugin that syncs UniFi Network (UniFi OS) devices into NetBox, mirroring netbox-meraki-sync"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31"]
+
+[tool.setuptools.packages.find]
+include = ["netbox_unifi_sync*"]
+
+[tool.setuptools.package-data]
+netbox_unifi_sync = ["templates/**/*.html"]
